@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Heartbeat dashboard</title>
+        <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+    </head>
+    <body>
+        <script>
+            $.getJSON("latest").
+                done(function(data) {
+                	$('#heartbeats').DataTable({
+                	    data: data,
+                        columns: [
+                            { data: "id" },
+                            { data: "name" },
+                            { data: "description" },
+                            { data: "timestampString" }
+                        ]
+                	});
+                });
+        </script>
+        <table id="heartbeats" class="display">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>
