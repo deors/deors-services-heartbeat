@@ -22,7 +22,8 @@ public class HeartbeatStore {
 
     public static void addHeartbeat(Heartbeat heartbeat) {
 
-        List<Heartbeat> heartbeatList = HEARTBEATS.getOrDefault(heartbeat.getName(), new ArrayList<Heartbeat>());
+        List<Heartbeat> heartbeatList = HEARTBEATS.getOrDefault(
+            heartbeat.getName(), new ArrayList<Heartbeat>());
         HEARTBEATS.putIfAbsent(heartbeat.getName(), heartbeatList);
         heartbeatList.add(heartbeat);
         logger.info("received heartbeat: " + heartbeat);
@@ -44,14 +45,17 @@ public class HeartbeatStore {
 
         synchronized (HEARTBEATS) {
             HEARTBEATS.clear();
-            logger.info("purged all heartbeats");
         }
+        logger.info("purged all heartbeats");
     }
 
     public static void purgeOldHearbeats() {
 
         LocalDateTime cut = LocalDateTime.now().minusDays(1);
-        HEARTBEATS.values().forEach(l -> l.removeIf(h -> h.getTimestamp().isBefore(cut)));
+        synchronized (HEARTBEATS) {
+            HEARTBEATS.values().forEach(l -> l.removeIf(h -> h.getTimestamp().isBefore(cut)));
+            HEARTBEATS.forEach((n, l) -> { if (l.isEmpty()) HEARTBEATS.remove(n); });
+        }
         logger.info("purged old heartbeats");
     }
 }
