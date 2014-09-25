@@ -1,4 +1,4 @@
-package deors.tools.heartbeat;
+package deors.services.heartbeat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -4,9 +4,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>deors.tools.hearbeat</name>
-    <groupId>deors.tools</groupId>
-    <artifactId>deors.tools.heartbeat</artifactId>
+    <name>deors.services.hearbeat</name>
+    <groupId>deors.services</groupId>
+    <artifactId>deors.services.heartbeat</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -26,7 +26,7 @@
 
         <jacoco-listeners.version>2.4</jacoco-listeners.version>
 
-        <start-class>deors.tools.heartbeat.Launcher</start-class>
+        <start-class>deors.services.heartbeat.Launcher</start-class>
     </properties>
 
     <build>

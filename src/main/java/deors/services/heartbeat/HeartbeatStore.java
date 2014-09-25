@@ -1,4 +1,4 @@
-package deors.tools.heartbeat;
+package deors.services.heartbeat;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

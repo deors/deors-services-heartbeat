@@ -3,4 +3,4 @@
  *
  * @author deors
  */
-package deors.tools.heartbeat;
+package deors.services.heartbeat;

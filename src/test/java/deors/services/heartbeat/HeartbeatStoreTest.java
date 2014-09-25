@@ -1,4 +1,4 @@
-package deors.tools.heartbeat;
+package deors.services.heartbeat;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

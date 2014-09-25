@@ -1,4 +1,4 @@
-package deors.tools.heartbeat;
+package deors.services.heartbeat;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;

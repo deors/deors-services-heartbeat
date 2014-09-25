@@ -1,4 +1,4 @@
-package deors.tools.heartbeat;
+package deors.services.heartbeat;
 
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
