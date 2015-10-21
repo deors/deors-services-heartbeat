@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                        http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.5.RELEASE</version>
+        <version>1.2.7.RELEASE</version>
     </parent>
 
     <properties>
@@ -21,14 +21,14 @@
 
         <java.version>1.8</java.version>
 
-        <jacoco.version>0.7.1.201405082137</jacoco.version>
+        <jacoco.version>0.7.5.201505241946</jacoco.version>
         <jacoco.path>${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar</jacoco.path>
         <jacoco.utReport>${project.build.directory}/jacoco.exec</jacoco.utReport>
         <jacoco.itReport>${project.build.directory}/jacoco-it.exec</jacoco.itReport>
         <jacoco.utAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.utReport}</jacoco.utAgentConfig>
         <jacoco.itAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.itReport}</jacoco.itAgentConfig>
 
-        <jacoco-listeners.version>2.4</jacoco-listeners.version>
+        <jacoco-listeners.version>3.5</jacoco-listeners.version>
 
         <start-class>deors.services.heartbeat.Launcher</start-class>
     </properties>
@@ -89,7 +89,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.sonar-plugins.java</groupId>
+            <groupId>org.sonarsource.java</groupId>
             <artifactId>sonar-jacoco-listeners</artifactId>
             <version>${jacoco-listeners.version}</version>
             <scope>test</scope>
