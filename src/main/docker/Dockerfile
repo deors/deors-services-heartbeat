@@ -7,7 +7,8 @@ FROM java:8
 VOLUME /tmp
 
 # Add the application
-ADD target/deors.services.heartbeat-1.0-SNAPSHOT.war app.war
+# ADD target/deors.services.heartbeat-1.0-SNAPSHOT.war app.war
+ADD deors.services.heartbeat-1.0-SNAPSHOT.war app.war
 
 # prepare the application to serve static content
 RUN sh -c 'touch /app.war'
