@@ -28,7 +28,7 @@
         <jacoco.utAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.utReport}</jacoco.utAgentConfig>
         <jacoco.itAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.itReport}</jacoco.itAgentConfig>
 
-        <jacoco-listeners.version>4.2.1.6971</jacoco-listeners.version>
+        <jacoco-listeners.version>4.3.0.7717</jacoco-listeners.version>
 
         <start-class>deors.services.heartbeat.Launcher</start-class>
     </properties>
