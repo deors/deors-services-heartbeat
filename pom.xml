@@ -26,14 +26,14 @@
 
         <java.version>1.8</java.version>
 
-        <jacoco.version>0.7.6.201602180812</jacoco.version>
+        <jacoco.version>0.8.0</jacoco.version>
         <jacoco.path>${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar</jacoco.path>
         <jacoco.utReport>${project.build.directory}/jacoco.exec</jacoco.utReport>
         <jacoco.itReport>${project.build.directory}/jacoco-it.exec</jacoco.itReport>
         <jacoco.utAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.utReport}</jacoco.utAgentConfig>
         <jacoco.itAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.itReport}</jacoco.itAgentConfig>
 
-        <jacoco-listeners.version>4.3.0.7717</jacoco-listeners.version>
+        <jacoco-listeners.version>5.1.0.13090</jacoco-listeners.version>
 
         <start-class>deors.services.heartbeat.Launcher</start-class>
     </properties>
